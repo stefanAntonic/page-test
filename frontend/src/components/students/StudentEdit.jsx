@@ -2,10 +2,7 @@ import { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
-import {
-  editStudent,
-  reset,
-} from "../../features/students/studentsSlice";
+import { editStudent, reset } from "../../features/students/studentsSlice";
 
 function StudentEdit() {
   const [studentInfo, setStudentInfo] = useState(null);
@@ -34,7 +31,6 @@ function StudentEdit() {
     }
     setStudentInfo(JSON.parse(localStorage.getItem("edit")));
 
-
     return () => {
       dispatch(reset());
     };
@@ -42,53 +38,57 @@ function StudentEdit() {
 
   useEffect(() => {
     if (studentInfo) {
-        setFormData({
-          id: studentInfo[0]._id,
-          name: studentInfo[0].name,
-          lastName: studentInfo[0].lastName,
-          indexNumber: studentInfo[0].indexNumber,
-          studentStatus: studentInfo[0].studentStatus,
-          year: studentInfo[0].year,
-        });
-      }
+      setFormData({
+        id: studentInfo[0]._id,
+        name: studentInfo[0].name,
+        lastName: studentInfo[0].lastName,
+        indexNumber: studentInfo[0].indexNumber,
+        studentStatus: studentInfo[0].studentStatus,
+        year: studentInfo[0].year,
+      });
+    }
   }, [studentInfo]);
-  
+
   const onChange = (e) => {
     setFormData((prevState) => ({
       ...prevState,
       [e.target.name]: e.target.value,
     }));
   };
-  
+
   const onSubmit = (e) => {
     e.preventDefault();
     if (indexNumber.length === 0) {
       toast.error("Unesite broj indexa");
     }
-    
-    dispatch( editStudent(id,{
-        name,
-        lastName,
-        indexNumber,
-        studentStatus,
+
+    dispatch(
+      editStudent({
+        id,
+        data:{
+          name,
+          lastName,
+          indexNumber,
+          studentStatus,
+        },
       })
     );
 
-      setFormData({
-        name: "",
-        lastName: "",
-        indexNumber: "",
-        studentStatus: "",
-        year: "",
-      });
-      navigate('/')
-    
-   
+    setFormData({
+      name: "",
+      lastName: "",
+      indexNumber: "",
+      studentStatus: "",
+      year: "",
+    });
+    navigate("/");
   };
   return (
     <>
       <section className="heading">
-        <h3>Izmjenite podatke od studenta {name} {lastName}</h3>
+        <h3>
+          Izmjenite podatke od studenta {name} {lastName}
+        </h3>
       </section>
       <section className="form">
         <form onSubmit={onSubmit}>

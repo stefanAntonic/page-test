@@ -45,11 +45,12 @@ export const getStudents = createAsyncThunk(
 // Edituje studenta iz baze na osnovu id
 export const editStudent = createAsyncThunk(
   "student/edit",
-  async (id, studentData, thunkAPI) => {
+  async (studentData, thunkAPI) => {
+    console.log(studentData);
 
     try {
       const token = thunkAPI.getState().auth.user.token;
-      return await studentsService.editStudent(id,studentData, token);
+      return await studentsService.editStudent(studentData, token);
     } catch (error) {
       (error.response && error.response.data && error.response.data.message) ||
         error.message ||
@@ -131,8 +132,7 @@ export const studentSlice = createSlice({
       .addCase(editStudent.fulfilled, (state, action) => {
         state.isLoading = false;
         state.isSuccess = true;
-        console.log(action.payload);
-        state.students = action.payload
+        state.students.push(action.payload)
       })
       .addCase(editStudent.rejected, (state, action) => {
         state.isLoading = false;
