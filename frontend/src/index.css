@@ -1,0 +1,498 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+p {
+  line-height: 1.7;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  line-height: 2.2;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.container {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+}
+.confirmation {
+  position: absolute;
+  background-color: red;
+  left: 44%;
+  top: 50%;
+  width: 10rem;
+  height: 10rem;
+}
+.confirmation h2 {
+  color: white;
+  text-align: center;
+}
+.confirmation div {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.confirmation div button {
+  width: 4rem;
+  height: 3rem;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid #e6e6e6;
+  margin-bottom: 60px;
+}
+.header ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header ul li {
+  margin-left: 20px;
+}
+
+.header ul li a {
+  display: flex;
+  align-items: center;
+}
+
+.header ul li a:hover {
+  color: #777;
+}
+
+.header ul li a svg {
+  margin-right: 5px;
+}
+
+.heading {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+  padding: 0 20px;
+}
+
+.heading p {
+  color: #828282;
+}
+.dashText {
+  text-align: left;
+  font-weight: 900;
+  font-size: 1.5rem;
+}
+.dashBtnContainer {
+  display: flex;
+  width: 100%;
+}
+.dashBtnHolder {
+  width: 100%;
+  margin: 1rem;
+}
+.form,
+.content {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #e6e6e6;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-family: inherit;
+}
+
+.form-group label {
+  text-align: left;
+  display: block;
+  margin: 0 0 5px 3px;
+}
+.btn {
+  padding: 10px 20px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  background: #000;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: center;
+  appearance: button;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn svg {
+  margin-right: 8px;
+}
+
+.btn-reverse {
+  background: #fff;
+  color: #000;
+}
+
+.btn-block {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.btn:hover {
+  transform: scale(0.98);
+}
+.btnList {
+  background: #ff4742;
+  border: 1px solid #ff4742;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 14px;
+  min-height: 15px;
+  outline: 0;
+  padding: 5px 5px;
+  text-align: center;
+  text-rendering: geometricprecision;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+}
+
+.btnList:hover,
+.btnList:active {
+  background-color: initial;
+  background-position: 0 0;
+  color: #ff4742;
+}
+
+.btnList:active {
+  opacity: 0.5;
+}
+
+.btnConfirm {
+  background: #d9df16;
+  border: 1px solid #d9df16;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 14px;
+  min-height: 15px;
+  outline: 0;
+  padding: 5px 5px;
+  text-align: center;
+  text-rendering: geometricprecision;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+}
+
+.btnConfirm:hover,
+.btnConfirm:active {
+  background-color: black;
+  background-position: 0 0;
+  color: white;
+}
+
+.btnConfirm:active {
+  opacity: 0.5;
+}
+
+.btnEdit {
+  background: #8fce00;
+  border: 1px solid #8fce00;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.2rem;
+  font-weight: 800;
+  line-height: 2rem;
+  min-height: 2rem;
+  width: 50%;
+  outline: 0;
+  padding: 5px 5px;
+  text-align: center;
+  text-rendering: geometricprecision;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+}
+
+.btnEdit:hover,
+.btnEdit:active {
+  background-color: #ffffff;
+  background-position: 0 0;
+  color: #8fce00;
+  transition: 300ms;
+}
+
+.btnEdit:active {
+  opacity: 0.5;
+}
+.btnEditDash {
+  background: #8fce00;
+  border: 1px solid #8fce00;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.2rem;
+  font-weight: 800;
+  line-height: 2rem;
+  min-height: 2rem;
+  width: 100%;
+  outline: 0;
+  padding: 5px 5px;
+  text-align: center;
+  text-rendering: geometricprecision;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+}
+
+.btnEditDash:hover,
+.btnEditDash:active {
+  background-color: #ffffff;
+  background-position: 0 0;
+  color: #8fce00;
+  transition: 300ms;
+}
+
+.btnEditDash:active {
+  opacity: 0.5;
+}
+
+.btnCreate {
+  background: #1d75c3;
+  border: 1px solid #1d75c3;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.2rem;
+  font-weight: 800;
+  line-height: 2rem;
+  min-height: 2rem;
+  width: 50%;
+  outline: 0;
+  padding: 5px 5px;
+  text-align: center;
+  text-rendering: geometricprecision;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+}
+
+.btnCreate:hover,
+.btnCreate:active {
+  background-color: #ffffff;
+  background-position: 0 0;
+  color: #1d75c3;
+  transition: 300ms;
+}
+
+.btnCreate:active {
+  opacity: 0.5;
+}
+.btnCreateDash {
+  background: #1d75c3;
+  border: 1px solid #1d75c3;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.2rem;
+  font-weight: 800;
+  line-height: 2rem;
+  min-height: 2rem;
+  width: 100%;
+  outline: 0;
+  padding: 5px 5px;
+  text-align: center;
+  text-rendering: geometricprecision;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+}
+
+.btnCreateDash:hover,
+.btnCreateDash:active {
+  background-color: #ffffff;
+  background-position: 0 0;
+  color: #1d75c3;
+  transition: 300ms;
+}
+
+.btnCreateDash:active {
+  opacity: 0.5;
+}
+.table {
+  width: 100%;
+  text-align: left;
+}
+.cdTable {
+  width: 80%;
+  text-align: left;
+  margin: auto;
+  font-size: 1.5rem;
+}
+.cdTable tr {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border: 1px solid #3388cc;
+  height: 4rem;
+  flex-direction: row;
+  text-align: left;
+  width: 95%;
+  padding: 0 1rem;
+  margin: 0.1rem;
+}
+.cdTable td {
+  margin: 1rem 2rem;
+  text-align: left;
+  width: 20%;
+}
+.cdTable th {
+  width: 20%;
+  text-align: left;
+  margin: 1rem 2rem;
+}
+.table tr {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid black;
+  height: 4rem;
+  flex-direction: row;
+  text-align: left;
+  width: 95%;
+  margin: 1rem;
+}
+.table td {
+  width: 5%;
+  text-align: left;
+}
+.table th {
+  width: 5%;
+  text-align: left;
+}
+.trFlex {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.loadingSpinnerContainer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 5000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loadingSpinner {
+  width: 64px;
+  height: 64px;
+  border: 8px solid;
+  border-color: #000 transparent #555 transparent;
+  border-radius: 50%;
+  animation: spin 1.2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 600px) {
+  .form {
+    width: 90%;
+  }
+
+
+  .heading h1 {
+    font-size: 2rem;
+  }
+
+  .heading p {
+    font-size: 1.5rem;
+  }
+}
