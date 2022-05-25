@@ -25,16 +25,17 @@ const getStudents = async (token) => {
   };
 
   // Updatuje studenta iz baze na osnovu id
-  const editStudent = async (studentId, studentData, token) => {
-    const config = {
+  const editStudent = async (studentData, token) => {
+    const {id, data} = studentData
+    console.log(studentData);
+    const config ={
       headers: {
         Authorization: `Bearer ${token}`,
         'Content-Type': 'application/json',
       
       },
     };
-    console.log(studentId);
-    const response = await axios.patch(API + studentId, studentData, config);
+    const response = await axios.patch(API + id, data, config);
     return response.data;
   };
    // Brise studenta iz baze na osnovu id
