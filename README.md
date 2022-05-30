@@ -1,4 +1,4 @@
-This is full stack app made using React and Redux-toolkit for frontend and Node.js, express server and MongoDb for backend. 
-This app is made for students and courses track where you need to register to be able to manage list of students, see details and update or remove students. 
-Also you can do the same for the courses.
-App is available on this url: https://pageteststefan.herokuapp.com/login 
+This is full stack app made using React and Redux Toolkit for frontend and Node.js, express server and MongoDb for backend. 
+This app is made for students and courses tracking, with ability to register and manage the list of students, see details, update student informations or remove students. 
+Courses in the app have the same ability to add, update or remove.
+App is available on this ULR: https://pageteststefan.herokuapp.com/login 
